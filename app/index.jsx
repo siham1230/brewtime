@@ -1,14 +1,31 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-
-const Index = () => {
+import { Text, View, ImageBackground, StyleSheet } from "react-native";
+export default function Index() {
     return (
-        <View>
-            <Text>hello word</Text>
-        </View>
-    )
+        <ImageBackground
+            source={require("../assets/brown.jpeg")}
+            style={styles.background}
+        >
+            <View style={styles.container}>
+                <Text style={styles.text}>Welcome abdelmajid and siham to BrewTime!</Text>
+            </View>
+        </ImageBackground>
+    );
 }
 
-export default Index
-
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    background: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    container: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    text: {
+        color: "white",
+        fontSize: 24,
+        fontWeight: "bold",
+    },
+});
