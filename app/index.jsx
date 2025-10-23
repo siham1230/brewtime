@@ -1,12 +1,23 @@
-import { Text, View, ImageBackground, StyleSheet } from "react-native";
+// import { router } from "expo-router";
+import { useRouter } from "expo-router";
+import { Text, View, ImageBackground, StyleSheet, Pressable } from "react-native";
 export default function Index() {
+    const router = useRouter();
     return (
+
+
         <ImageBackground
             source={require("../assets/brown.jpeg")}
             style={styles.background}
         >
             <View style={styles.container}>
-                <Text style={styles.text}>Welcome abdelmajid and siham to BrewTime!</Text>
+
+                <Pressable
+                    onPress={() => router.push("/MenuScreen")}
+                    style={styles.button} >
+                    <Text style={styles.text}>Welcome abdelmajid and siham to BrewTime!</Text>
+                </Pressable>
+
             </View>
         </ImageBackground>
     );
